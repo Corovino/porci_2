@@ -1,3 +1,6 @@
+
+
+
 $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -16,14 +19,48 @@ $(function() {
 	});
 
 });
+
+
 //-------------------------------------------------------------------------------
 
+
 function confirmar(){
+
 	var username = $('#username').val();
 	var email = $('#email').val();
 	var password = $('#password').val();
 	var con_password = $('#confirm-password').val();
 
-	var data= $('#register-form').serialize();
-	alert(data);
+     
+	var data= $('#login-form').serialize();
+	  console.log(data);
+		$.ajax({
+			url:'../Controllers/usuario.php',
+			type:'POST',
+			data:data,
+			success:function(data){
+
+	           location.href='./panel_control.php';
+			}
+		});
 }
+
+//-------------------------------------------------------------------------------
+
+  function close(){
+	alert('nanananan');
+	/*$.ajax({
+        type:'POST',
+        url:'../Controllers/usuario.php',
+        data:'boton=cerrar',
+        success:function(data){
+
+             location.href ="../views/"
+        }
+	});*/
+
+}
+$('#close').click(function(){
+
+      alert('holasssss');
+});
