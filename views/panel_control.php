@@ -10,7 +10,7 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario']=="yes"){
     <script type="text/javascript"  src="https://code.jquery.com/jquery-2.1.4.min.js "></script>
  
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../Resources/js/myJs.js"></script>
+    <script type="text/javascript" src="/prueba/Resources/js/myJs.js"></script>
 
     <style type="text/css">
      .barra{
@@ -54,7 +54,7 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario']=="yes"){
                     <li><a href="#"><?php   echo" ".$_SESSION['usuario']." ";   ?></a></li>
                    
                     <li role="separator" class="divider"></li>
-                    <li><button type="button" id="close" class="btn btn-default" onclick="close();">Salir</button></li>
+                    <li><button type="button" id="close" class="btn btn-default" onclick="close();" >Salir</button></li>
                   </ul>
             </div>
            </div>
@@ -62,14 +62,14 @@ if(isset($_SESSION['usuario']) && $_SESSION['usuario']=="yes"){
      
   </div>
 </nav>
- 
+  <h1>Bienvenido</h1>
  
 </body>
 </html>
 <?php        
      
  }else{
-    header('Location: sesion.php');
+    header('Location: usuario.php');
  
 }
  

@@ -1,8 +1,8 @@
 <?php 
 
- require_once"../Model/usuario.php";
+ require_once('../Model/usuario.php');
 
-  $boton=$_POST['cerrar'];
+  $boton=$_POST['boton'];
 
   if($boton =="cerrar"){
 
@@ -12,7 +12,7 @@
 
        
 		  $username=$_POST['username'];
-		  $pasword=$_POST['password'];
+		  $password=$_POST['password'];
 
          
 
@@ -22,7 +22,7 @@
 		  $array = $p->identificar($username,$password);
 		  
 		    
-			   if($array[0]=0){
+			   if($array[0]==0){
 			      echo "Nombre de usuario o clave incorrecto";
 			    }else{
 			    

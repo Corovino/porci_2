@@ -3,7 +3,7 @@
 define("SERVER","localhost");
 define("USER","root");
 define("PASS","root");
-define("DB","Porciweb");
+define("DB","porciweb");
 
 
 ?>

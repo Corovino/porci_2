@@ -13,10 +13,7 @@
 	<title>Prueba</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/prueba/Resources/css/stylo.css">
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	
-	<script type="text/javascript" src="/prueba/Resources/js/myJs.js"></script>
+   
 
 </head>
 <body>
@@ -94,8 +91,12 @@
 			</div>
 		</div>
 	</div>
+<footer>
 
-   
- 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+	<script type="text/javascript" src="/prueba/Resources/js/myJs.js"></script>
+	
+</footer> 
 </body>
 </html>
