@@ -14,22 +14,19 @@
 		  $username=$_POST['username'];
 		  $password=$_POST['password'];
 
-         
-
-
-   
 		  $p= new Usuario();
 		  $array = $p->identificar($username,$password);
-		  
-		    
-			   if($array[0]==0){
-			      echo "Nombre de usuario o clave incorrecto";
+
+           var_dump($array);
+		/*if($array[0]==0){
+
+			      echo "0";
 			    }else{
 			    
 			        session_start();
-			        $_SESSION['usuario']="yes";
+			        $_SESSION['usuario']=$array[1];
 			        $_SESSION['Nombre']=$array[0];
-			    } 
+			    }*/ 
 
 
   }

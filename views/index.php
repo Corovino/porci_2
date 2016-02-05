@@ -35,6 +35,9 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<form id="login-form"  method="post" role="form" style="display: block;">
+								    <div class="mistake error">
+								    	<p>Usuario o clave incorrectos por favor intentelo de nuevo </p>
+								    </div>
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
 									</div>
@@ -48,7 +51,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<button type="submit" name="login-submit" id="login-submit" tabindex="4" onclick="confirmar();" class="form-control btn btn-login" value="Log In">Ingresar</button>
+												<button type="submit" name="login-submit" id="login-submit" tabindex="4"  class="form-control btn btn-login" value="Log In">Ingresar</button>
 											</div>
 										</div>
 									</div>

@@ -1,7 +1,10 @@
 
 
+$(function(){
 
-$(function() {
+
+
+
 
     $('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
@@ -19,48 +22,53 @@ $(function() {
 	});
 
 
-
-
 });
 
-//-------------------------------------------------------------------------------
-$(document).ready(function(){
 
-	
-    var confirmar=function(){
+
+//-------------------------------------------------------------------------------
+
 			
-				var username = $('#username').val();
-				//var email = $('#email').val();
-				var password = $('#password').val();
-				//var con_password = $('#confirm-password').val();
+
+            $('#login-submit').click(function(){
+
+			        var username = $('#username').val();
+				    //var email = $('#email').val();
+				    var password = $('#password').val();
+				    //var con_password = $('#confirm-password').val();
 
 			     
-				var data= $('#login-form').serialize();
-				  console.log(data);
+				    var data= $('#login-form').serialize();
+				    console.log(data);
 					$.ajax({
 						url:'../Controllers/usuario.php',
 						type:'POST',
 						data:data,
 						success:function(data){
-			                
-				           location.href='./panel_control.php';
+							console.log(typeof(data));
+			                if(typeof(data)!='string'){
+			                      console.log('soy data'+data);
+			                	 alert('datos incorrectos');
+			                }else{
+			                	console.log(data);          	
+                                    location.href='./panel_control.php';
+			                	
+                               
+			                }
+				           
 						}
 					});
-			}
-
-			
-
-
+		      });	
 		
 
 
 
-			  function close(){
+              $('#close').click(function(){
 
-			  	        var data='boton=cerrar';
-						console.log('nanananan');
+			        var data='boton=cerrar';
+						console.log(data);
 						$.ajax({
-							beforeSend: function(){
+							beforeSend: function(data){
                                 console.log(data);
 							},
 					        type:'POST',
@@ -71,19 +79,11 @@ $(document).ready(function(){
 					             location.href ="../views/"
 					        }
 						});
-
-			   }
-
-
-              $('#close').click(function(){
-
-			      close();
 		      });		
 
 
 
-});
-
+//-------------------------------------------------------------------------------
 
 
 

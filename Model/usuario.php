@@ -19,19 +19,21 @@ class Usuario
      
 		$pass=sha1($password);
 	
-		$sql = "select * from registro_por where correo='" . $username . "'  AND  pass='" . $password . "' ";
+		$sql = "select nombre from registro_por where correo='" . $username . "'  AND  pass='" . $password . "' ";
 		$re = $this->conexion->conexion->query($sql);
 	    
 		if($re->num_rows > 0){
 				//--echo $filas;
 			   
 				$r =$re->fetch_array();
+                 return $r['nombre'];
 			}
 			else{
-			    echo'No existen filas.';
+			    
 			    $r[0]=0;
+			    return $r;
 			}
-			return $r;
+			
 			//exit();
 
 			$this->conexion->cerrar();

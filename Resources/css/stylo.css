@@ -1,7 +1,36 @@
-body {
+/*------------------------------------------------------------- 
+                TABLA CONTENIDO ESTILOS
+
+-------------------------------------------------------------
+
+
+* 1- Estilos Globales.
+* 2- Estilos Formulario ingreso y registro.
+* 3-ajustes de estilos boostrap.
+
+
+
+
+
+-------------------------------------------------------------  */ 
+
+/*------------------------------------------------------------- 
+                1- Estilos Globales.
+-------------------------------------------------------------*/
+
+
+body{
     padding-top: 90px;
-    background-color: peru;
+    background-color: #F1F1F1;
 }
+
+
+
+
+/*------------------------------------------------------------- 
+          2- Estilos Formulario ingreso y registro.
+-------------------------------------------------------------*/
+
 .panel-login {
 	border-color: #ccc;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -97,4 +126,23 @@ body {
 	color: #fff;
 	background-color: #1CA347;
 	border-color: #1CA347;
+}
+.error
+.mistake{
+	background-color: #f44336;
+	color:#fff;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.mistake > p{
+	padding-top: 5px;
+	text-align: center;
+}
+/*------------------------------------------------------------- 
+                3-ajustes de estilos boostrap.
+-------------------------------------------------------------*/
+
+.dropdown-menu {
+	margin: 2px  -90px 0;
 }
