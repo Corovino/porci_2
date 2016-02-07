@@ -26,14 +26,14 @@ class Usuario
 				//--echo $filas;
 			   
 				$r =$re->fetch_array();
-                 return $r['nombre'];
+                
 			}
 			else{
 			    
 			    $r[0]=0;
-			    return $r;
+			    
 			}
-			
+			 return $r;
 			//exit();
 
 			$this->conexion->cerrar();

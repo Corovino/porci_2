@@ -76,13 +76,13 @@
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
+										<input type="password" name="confirm_password" id="confirm_password" tabindex="2" class="form-control" placeholder="Confirmar Contraseña">
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
 												
-												<button type="submit" name="register-submit" id="register-submit" tabindex="4" onclick="confirmar();" class="form-control btn btn-register" >Registrarse</button>
+												<button type="submit" name="register-submit" id="register-submit" tabindex="4"  class="form-control btn btn-register" >Registrarse</button>
 											</div>
 										</div>
 									</div>

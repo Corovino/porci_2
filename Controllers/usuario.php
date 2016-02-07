@@ -16,17 +16,17 @@
 
 		  $p= new Usuario();
 		  $array = $p->identificar($username,$password);
+            var_dump($array);
+          
+		if($array){
 
-           var_dump($array);
-		/*if($array[0]==0){
-
-			      echo "0";
-			    }else{
-			    
-			        session_start();
-			        $_SESSION['usuario']=$array[1];
-			        $_SESSION['Nombre']=$array[0];
-			    }*/ 
+		        session_start();
+		        $_SESSION['usuario']=$array[0];
+		        $_SESSION['Nombre']=$array[0];
+		    }else{
+		    
+		       echo "no";
+		    }
 
 
   }

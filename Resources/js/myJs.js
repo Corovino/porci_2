@@ -1,4 +1,23 @@
 
+/**
+  Hoja en la que se trabaja efectos de registro
+  loguin  en formularios de ingreso  y se  trabaja 
+  captura de datos registro e ingreso.
+
+   
+
+
+
+
+*/
+
+
+
+
+
+
+//--------------------------------------------------------------
+
 
 $(function(){
 
@@ -28,7 +47,7 @@ $(function(){
 
 //-------------------------------------------------------------------------------
 
-			
+//Evento on nclick que  me captura datos y me permite ingreso al usuario .			
 
             $('#login-submit').click(function(){
 
@@ -41,17 +60,23 @@ $(function(){
 				    var data= $('#login-form').serialize();
 				    console.log(data);
 					$.ajax({
+						beforeSend:function(){
+                           console.log(data);
+						},
 						url:'../Controllers/usuario.php',
 						type:'POST',
 						data:data,
 						success:function(data){
-							console.log(typeof(data));
-			                if(typeof(data)!='string'){
+							console.log(data);
+							var resp =typeof(data);
+							console.log(resp);
+			                if(resp =='no'){
 			                      console.log('soy data'+data);
-			                	 alert('datos incorrectos');
+			                	 alert('datos incorrectos'); 
 			                }else{
-			                	console.log(data);          	
-                                    location.href='./panel_control.php';
+			                	location.href='./panel_control.php';
+			                	       	
+                                    
 			                	
                                
 			                }
@@ -60,8 +85,8 @@ $(function(){
 					});
 		      });	
 		
-
-
+//-------------------------------------------------------------------------------
+//Envento on click   que me cierra  sesi{on de usuario 
 
               $('#close').click(function(){
 
@@ -80,6 +105,58 @@ $(function(){
 					        }
 						});
 		      });		
+
+
+
+
+//-------------------------------------------------------------------------------
+
+//evento  onclick que me permite  el registro de usuario 
+
+
+$('#register-submit').click(function(){
+      
+ 
+      var data= $('#register-form').serialize();
+      
+        $.ajax({
+	         	 beforeSend:function(){
+	         	 	console.log(data);
+	         	 },
+	         	 type:'POST',
+	         	 url:'../Controllers/registro.php',
+	         	 data:data,
+	         	 success: function(data){
+	         	 	   console.log('nanananana');
+	                   console.log("soy data"+data);
+	         	 }
+
+           });
+
+     
+
+
+
+
+});
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
