@@ -13,16 +13,20 @@ require_once("../Model/registro.php");
      $reg = new Registro();
 
      $t=$reg->registrar($username,$email,$password,$confirm_password);  
-      
-     var_dump($t);
-      
-    if($t != 1){
+      $respuesta="soy controllers";
+      $fail="segenero un erro";
+     //var_dump($t);
+     //echo ($t); 
+    if($t == true){
     	//return "ok";
-    	//echo "es difenrete de uno";
-    	return $t;
+    	header('Content-Type: application/json');
+    	echo json_encode($respuesta);
+    	
     }else{
-    	return $t;
+    	header('Content-Type: application/json');
+    	echo json_encode($fail);
     	//echo "fail";
+    	//echo json_encode("fail");
      }
 
 

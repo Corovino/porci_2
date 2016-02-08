@@ -34,7 +34,7 @@ class Registro
                     
                     $this->has= crypt($password);
 				    $this->has_con= crypt($confirm_password);
-                    $p= "soy diferente de uno";
+                    $p= true;
 				    
 				    $registro=$this->conexion->conexion->query("insert into registro_por (nombre, correo, pass, conf_pass) values( '$username','$email','$this->has','$this->has_con')");
                     
